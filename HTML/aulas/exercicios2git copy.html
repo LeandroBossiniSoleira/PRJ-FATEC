@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Operações Aritméticas </title>
+</head>
+
+<body>
+    <h1>Operações Aritiméticas</h1>
+    <p>Exibe o calculo das operações aritméticas baseado em 2 números</p>
+
+
+    <form id=form>
+    <input id="num1" type="number" placeholder="Digite o primeiro número"><br>
+    <input id="num2" type="number" placeholder="Digite o segundo número"><br>
+    <p><button>Calcular</button></p><br>
+    </form>
+
+    <div id=result></div>
+    
+    <script>
+        function onSubmit(event){
+            event.preventDefault()
+        
+
+        let n1 = parseFloat(num1.value)
+        let n2 = parseFloat(num2.value)
+        let plus = (n1) + (n2)
+        let min = (n1) - (n2)
+        let mult = (n1) * (n2)
+        let div = (n1) / (n2)
+        result.innerHTML= `
+        A soma é ${plus}<br> 
+        A subtração é ${min}<br> 
+        A multiplicação é ${mult}<br> 
+        A divisão é ${div}`        
+        }
+        form.addEventListener('submit', onSubmit)
+    </script>
+</body>
+
+</html>
